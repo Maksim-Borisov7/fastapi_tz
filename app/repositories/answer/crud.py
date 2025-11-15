@@ -36,7 +36,9 @@ class AnswerRepository:
 
         Args:
             question_id (int): ID вопроса, к которому создаётся ответ.
-            data (AnswerSchemas): Данные нового ответа.
+            data (AnswerSchemas): Данные нового ответа(id, text, user_id).
+             data.user_id: генерируется рандомный UUID пользователя, если не ввели самостоятельно,
+             Но если один и тот же пользователь хочет оставить несколько ответов на один вопрос, можно вставить его UUID
             session (AsyncSession): Асинхронная сессия SQLAlchemy.
 
         Returns:
