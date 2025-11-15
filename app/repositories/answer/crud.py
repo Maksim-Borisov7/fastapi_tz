@@ -25,7 +25,7 @@ class AnswerRepository:
     model = AnswerModels
 
     @classmethod
-    async def addition_answer(
+    async def create_answer(
         cls,
         question_id: int,
         data: AnswerSchemas,

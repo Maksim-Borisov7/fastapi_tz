@@ -19,7 +19,7 @@ async def add_answer(id: int,
                      data: Annotated[AnswerSchemas, Depends()],
                      session: AsyncSession = Depends(db_helper.get_session)
                      ) -> dict:
-    return await AnswerRepository.addition_answer(id, data, session)
+    return await AnswerRepository.create_answer(id, data, session)
 
 
 @router.get(
