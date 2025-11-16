@@ -3,7 +3,7 @@
 # Тестовое задание на FastAPI с использованием PostgreSQL, SQLAlchemy, Alembic и Docker.
 # Проект включает API для управления вопросами и ответами.
 
-## Стек технологий
+### Стек технологий
 
 # -FastAPI
 # -PostgreSQL (Docker)
@@ -28,8 +28,11 @@
 ## 5) После запуска контейнеров примените миграции Alembic:
 # docker exec -it question_answer_app alembic upgrade head
 
-## 6) После запуска приложение доступно по адресу:
+## 6) Можете запустить тесты - pytest внутри контейнера app:
+# docker exec -it question_answer_app pytest
+
+## 7) После запуска приложение доступно по адресу:
 # http://localhost:8000/docs
 
-## 7) Остановка контейнеров
+## 8) Остановка контейнеров
 # docker compose down
